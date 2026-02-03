@@ -69,7 +69,7 @@ function Projects() {
               between users.
             </p>
             <div className="project-links">
-              <a href="#" target="_blank">
+              <a href="https://chatting-webpage.onrender.com" target="_blank">
                 Live
               </a>
               <a
