@@ -34,7 +34,7 @@ body {
   margin-bottom: 5vh;
 }
 
-/* Left logo */
+
 /* Menu icon (hidden on desktop) */
 .menu-icon {
   display: none;
@@ -112,4 +112,11 @@ body {
   .right.open {
     display: flex;
   }
+}
+.left h1{
+  font-family: Impact;
+  font-size: xx-large;
+  font-weight:900;
+  background-size: cover;
+  background-clip: text;
 }

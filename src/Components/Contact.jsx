@@ -14,19 +14,12 @@ function ContactFeedback() {
   const [feedback, setFeedback] = useState({
     name: "",
     rating: "Excellent",
-    feedback: "",
+    feedback: "very good",
   });
 
   // CONTACT FORM HENDLER..
   const contactHandler = async (e) => {
     e.preventDefault();
-
-    const { name, email, message } = contact;
-
-    if (!name.trim() || !email.trim() || !message.trim()) {
-      alert("All fields are required");
-      return;
-    }
 
     try {
       const res = await api.post("/contact", contact);
@@ -34,7 +27,8 @@ function ContactFeedback() {
       setContact({ name: "", email: "", message: "" });
     } catch (error) {
       console.error(error);
-      alert(error.response?.data?.message || "Something went wrong");
+      alert("Network Error On frontend, Please try after some time ?");
+      setContact({ name: "", email: "", message: "" });
     }
   };
 
@@ -46,10 +40,12 @@ function ContactFeedback() {
       const res = await api.post("/feedback", feedback);
       alert(res.data.message);
       setFeedback({ name: "", rating: "Excellent", feedback: "" });
-    } catch (error) {
-      console.error(error);
-      alert(error.response?.data?.message || "Something went wrong");
+    } catch (e) {
+      console.log(e);
+      alert("Network Error frontend,Please try after some time ?");
+      setFeedback({ name: "", rating: "Excellent", feedback: "" });
     }
+
   };
 
   return (
@@ -128,6 +124,7 @@ function ContactFeedback() {
                 onChange={(e) =>
                   setFeedback({ ...feedback, rating: e.target.value })
                 }
+                required
               >
                 <option>Excellent</option>
                 <option>Good</option>
