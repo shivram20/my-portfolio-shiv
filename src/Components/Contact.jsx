@@ -14,7 +14,7 @@ function ContactFeedback() {
   const [feedback, setFeedback] = useState({
     name: "",
     rating: "Excellent",
-    feedback: "very good",
+    feedback: "",
   });
 
   // CONTACT FORM HENDLER..
@@ -45,7 +45,6 @@ function ContactFeedback() {
       alert("Network Error frontend,Please try after some time ?");
       setFeedback({ name: "", rating: "Excellent", feedback: "" });
     }
-
   };
 
   return (
