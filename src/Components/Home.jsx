@@ -23,7 +23,7 @@ function Home() {
         {/* Right Content */}
         <div className="home-right">
           <h2>
-            Welcome to <span>SHIVRAM</span>
+            Welcome to My Portfolio
           </h2>
           <p>
             Build a clean, modern and responsive website using reusable

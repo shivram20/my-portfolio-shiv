@@ -1,92 +1,405 @@
 .about-page {
   min-height: 100vh;
-  padding: 60px 20px;
-  background: rgb(218, 231, 239);
-  color: black;
+
+  width: 100%;
+
+  padding: 100px 20px;
+
+  background: #041936;
+
+  color: #ffffff;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   font-family: "Segoe UI", sans-serif;
+
+  box-sizing: border-box;
 }
+
+
+/* =====================================================
+   ABOUT HEADER
+===================================================== */
+
+.about-page::before {
+  content: "ABOUT ME";
+
+  color: #078cff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+}
+
 
 .name {
-  font-size: 2.8rem;
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 56px);
+
+  line-height: 1.15;
+
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
+
+  letter-spacing: 1px;
+
   text-align: center;
+
+  color: #ffffff;
 }
+
 
 .role {
-  font-size: 1.1rem;
-  /* color: #cfd9df; */
-  margin-bottom: 40px;
+  margin: 18px 0 55px;
+
   text-align: center;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #9eb4ca;
+
+  max-width: 650px;
 }
 
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
 .block {
-  max-width: 900px;
   width: 100%;
+
+  max-width: 1250px;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
 }
+
+
+/* =====================================================
+   COMMON CARD STYLE
+===================================================== */
 
 .about-text,
 .skills {
-  background: rgb(246, 247, 248);
-  ;
-  backdrop-filter: blur(10px);
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #06182e;
+
+  border: 1px solid #16436b;
+
   border-radius: 16px;
-  padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
 
 .about-text:hover,
 .skills:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+
+  border-color: #078cff;
+
+  box-shadow:
+    0 15px 45px rgba(0, 130, 255, 0.15);
 }
+
+
+/* =====================================================
+   ABOUT TEXT
+===================================================== */
 
 .about-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  /* color: #eaeaea; */
+  margin: 0;
+
+  color: #a6bbcf;
+
+  font-size: 15px;
+
+  line-height: 1.8;
 }
 
-.skills h2 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #3f87fa;
-  display: inline-block;
-  padding-bottom: 5px;
+
+/* Paragraph spacing if multiple paragraphs */
+
+.about-text p + p {
+  margin-top: 18px;
 }
+
+
+/* =====================================================
+   SKILLS TITLE
+===================================================== */
+
+.skills h2 {
+  margin: 0 0 25px;
+
+  padding-bottom: 10px;
+
+  display: inline-block;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  border-bottom: 2px solid #078cff;
+}
+
+
+/* =====================================================
+   SKILLS LIST
+===================================================== */
 
 .skills ul {
   list-style: none;
+
   padding: 0;
+
+  margin: 0;
 }
+
 
 .skills li {
-  margin-bottom: 10px;
-  padding-left: 20px;
   position: relative;
-  font-size: 1rem;
+
+  margin-bottom: 14px;
+
+  padding: 12px 15px 12px 40px;
+
+  color: #a6bbcf;
+
+  background: #0a213b;
+
+  border: 1px solid #123b5e;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
+
+
+/* =====================================================
+   SKILL HOVER
+===================================================== */
+
+.skills li:hover {
+  background: #0d2d4c;
+
+  border-color: #078cff;
+
+  transform: translateX(5px);
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   CHECK ICON
+===================================================== */
 
 .skills li::before {
-  content: "✔";
+  content: "✓";
+
   position: absolute;
-  left: 0;
-  color: #3f87fa;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #078cff;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+/* =====================================================
+   OPTIONAL HIGHLIGHT
+===================================================== */
+
+.about-text strong,
+.skills strong {
+  color: #078cff;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .about-page {
+    padding: 80px 20px;
+  }
+
+
   .block {
     grid-template-columns: 1fr;
   }
 
-  .name {
-    font-size: 2.2rem;
+
+  .about-text,
+  .skills {
+    max-width: 750px;
+
+    margin: 0 auto;
   }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .about-page {
+    padding: 70px 16px;
+  }
+
+
+  .about-page::before {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .name {
+    font-size: 36px;
+  }
+
+
+  .role {
+    margin: 15px 0 35px;
+
+    font-size: 14px;
+  }
+
+
+  .block {
+    gap: 18px;
+  }
+
+
+  .about-text,
+  .skills {
+    padding: 22px;
+
+    border-radius: 14px;
+  }
+
+
+  .about-text p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .skills h2 {
+    font-size: 21px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .skills li {
+    padding: 11px 12px 11px 38px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .about-page {
+    padding: 60px 12px;
+  }
+
+
+  .name {
+    font-size: 31px;
+  }
+
+
+  .role {
+    font-size: 13px;
+  }
+
+
+  .about-text,
+  .skills {
+    padding: 18px;
+  }
+
+
+  .skills li {
+    font-size: 12px;
+
+    padding-left: 35px;
+  }
+
 }

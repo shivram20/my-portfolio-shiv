@@ -1,3 +1,17 @@
-*{
-  font-family:Sitka Text; 
-} 
+* {
+  box-sizing: border-box;
+
+  font-family: Sitka Small Semibold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #041936;
+
+  color: #ffffff;
+}

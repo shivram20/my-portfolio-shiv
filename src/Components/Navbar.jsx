@@ -25,8 +25,12 @@ function Navbar() {
 
   return (
     <div className={`header ${showNav ? "nav-show" : "nav-hide"}`}>
-      <div className="left">
-        <h1>SHIVRAM</h1>
+      <div className="brand left">
+        <div className="brand-icon">S</div>
+        <div className="brand-text">
+          <span>SHIV</span>
+          <span>RAM</span>
+        </div>
       </div>
 
       <div className="menu-icon" onClick={() => setOpen(!open)}>
@@ -34,10 +38,18 @@ function Navbar() {
       </div>
 
       <div className={`right ${open ? "open" : ""}`}>
-        <NavLink className="ns" to="/home" onClick={() => setOpen(false)}>Home</NavLink>
-        <NavLink className="ns" to="/about" onClick={() => setOpen(false)}>About</NavLink>
-        <NavLink className="ns" to="/projects" onClick={() => setOpen(false)}>Projects</NavLink>
-        <NavLink className="ns" to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
+        <NavLink className="ns" to="/home" onClick={() => setOpen(false)}>
+          Home
+        </NavLink>
+        <NavLink className="ns" to="/about" onClick={() => setOpen(false)}>
+          About
+        </NavLink>
+        <NavLink className="ns" to="/projects" onClick={() => setOpen(false)}>
+          Projects
+        </NavLink>
+        <NavLink className="ns" to="/contact" onClick={() => setOpen(false)}>
+          Contact
+        </NavLink>
       </div>
     </div>
   );

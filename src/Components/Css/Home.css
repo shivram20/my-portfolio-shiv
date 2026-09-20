@@ -1,134 +1,549 @@
-* {
-  box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-/* Page background */
 .home-container {
+  width: 100%;
+
   min-height: 100vh;
+
+  padding: 100px 20px;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
-  background: rgb(218, 231, 239);
-}
-/* Main card */
-.home-card {
-  width: 90%;
-  max-width: 1100px;
-  height: 480px;
-  background: white;
-  display: flex;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(197, 193, 193, 0.25);
+
+  background: #041936;
+
+  color: #ffffff;
 }
 
-/* Left section */
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.home-card {
+  width: 100%;
+
+  max-width: 1250px;
+
+  min-height: 520px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: #06182e;
+
+  border: 1px solid #16436b;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.home-card:hover {
+  border-color: #1b6da8;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   LEFT SECTION
+===================================================== */
+
 .home-left {
   width: 45%;
-  background: #f7f9fc;
-  padding: 50px;
+
+  padding: 55px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
+  background:
+    linear-gradient(145deg,
+      #0a213b,
+      #06182e);
+
+  border-right: 1px solid #16436b;
+
+  position: relative;
+
+  overflow: hidden;
 }
+
+
+/* Decorative blue glow */
+
+.home-left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(7, 140, 255, 0.12);
+
+  filter: blur(50px);
+
+  top: -80px;
+
+  left: -80px;
+}
+
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
 
 .home-left h1 {
-  font-size: 39px;
-  line-height: 1.2;
-  color: #000;
-  margin-bottom: 30px;
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0 0 30px;
+
+  font-size: clamp(38px, 4vw, 52px);
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
 }
 
-/* Tech stack */
-.tech-box {
-  display: flex;
-  gap: 15px;
+
+.home-left h1 span {
+  color: #078cff;
 }
+
+
+/* =====================================================
+   TECH STACK
+===================================================== */
+
+.tech-box {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
 
 .tech-box span {
-  padding: 10px 16px;
-  border-radius: 8px;
-  background: #3b82f6;
-  color: white;
+  padding: 9px 16px;
+
+  border-radius: 25px;
+
+  background: #0b3764;
+
+  border: 1px solid #14527e;
+
+  color: #e3f2ff;
+
+  font-size: 13px;
+
   font-weight: 600;
-  font-size: 14px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* Right section */
+
+.tech-box span:hover {
+  background: #078cff;
+
+  border-color: #078cff;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   RIGHT SECTION
+===================================================== */
+
 .home-right {
   width: 55%;
-  padding: 60px 50px;
+
+  padding: 60px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 }
 
-.home-right h2 {
-  font-size: 30px;
+
+/* =====================================================
+   SMALL INTRO
+===================================================== */
+
+.home-right::before {
+
+  display: block;
+
   margin-bottom: 15px;
-  color: #000;
+
+  color: #078cff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
 }
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.home-right h2 {
+  margin: 0 0 18px;
+
+  font-size: clamp(30px, 3vw, 42px);
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
 
 .home-right h2 span {
-  color: #3b82f6;
+  color: #078cff;
 }
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .home-right p {
-  font-size: 15px;
-  color: #000;
-  margin-bottom: 30px;
-  max-width: 420px;
+  max-width: 550px;
+
+  margin: 0 0 30px;
+
+  color: #a6bbcf;
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-/* Buttons */
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
 .home-buttons {
   display: flex;
-  gap: 15px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
 }
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
 
 .btn-primary {
-  padding: 12px 22px;
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 10px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 24px;
+
+  background: #078cff;
+
+  border: 1px solid #078cff;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
   font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+
   text-decoration: none;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(0, 140, 255, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 
 .btn-primary:hover {
-  transform: scale(1.05);
+  background: #0879d8;
+
+  border-color: #0879d8;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 140, 255, 0.25);
 }
+
+
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
 
 .btn-secondary {
-  padding: 12px 22px;
-  background: #f7f9fc;
-  color: #000;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 24px;
+
+  background: #102943;
+
+  border: 1px solid #275274;
+
+  border-radius: 9px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
   font-weight: 600;
+
+  text-decoration: none;
+
   cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+.btn-secondary:hover {
+  background: #163654;
+
+  border-color: #078cff;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .home-container {
+    padding: 80px 20px;
+  }
+
+
   .home-card {
     flex-direction: column;
-    height: auto;
+
+    min-height: auto;
   }
+
 
   .home-left,
   .home-right {
     width: 100%;
-    padding: 35px;
+
+    padding: 45px;
   }
 
-  .home-left h1 {
-    font-size: 32px;
+
+  .home-left {
+    min-height: 300px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #16436b;
   }
+
+
+  .home-right {
+    min-height: 350px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .home-container {
+    padding: 60px 16px;
+  }
+
+
+  .home-card {
+    border-radius: 15px;
+  }
+
+
+  .home-left,
+  .home-right {
+    padding: 30px 22px;
+  }
+
+
+  .home-left {
+    min-height: 260px;
+  }
+
+
+  .home-left h1 {
+    font-size: 34px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .tech-box {
+    gap: 8px;
+  }
+
+
+  .tech-box span {
+    padding: 8px 13px;
+
+    font-size: 11px;
+  }
+
+
+  .home-right {
+    min-height: auto;
+  }
+
+
+  .home-right::before {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .home-right h2 {
+    font-size: 29px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .home-right p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+  }
+
+
+  .home-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+
+    padding: 12px 20px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .home-container {
+    padding: 50px 12px;
+  }
+
+
+  .home-left,
+  .home-right {
+    padding: 25px 18px;
+  }
+
+
+  .home-left h1 {
+    font-size: 30px;
+  }
+
+
+  .home-right h2 {
+    font-size: 26px;
+  }
+
+
+  .home-right p {
+    font-size: 13px;
+  }
+
+
+  .tech-box span {
+    font-size: 10px;
+
+    padding: 7px 11px;
+  }
+
 }

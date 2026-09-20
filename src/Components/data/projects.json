@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Tic Tac Toe",
+    "image": "assets/game.png",
+    "description": "Tic Tac Toe is a simple web-based game developed using HTML, CSS, and JavaScript. HTML creates the game structure, CSS styles the 3×3 grid, and JavaScript controls the game logic. Players take turns as X and O, and the game detects wins or draws automatically.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "liveLink": "https://shivram20.github.io/TikTekTo_Game/",
+    "codeLink": "https://github.com/shivram20/TikTekTo_Game",
+    "rating": "4.5",
+    "reviews": 8,
+    "suggestions": 2
+  },
+  {
+    "id": 2,
+    "title": "Hostel Management System",
+    "image": "assets/hostel.png",
+    "description": "A Hostel Management System (HMS) is a web-based application built with PHP and MySQL designed to automate and streamline hostel administrative operations, such as student registration, room allocation, fee collection, and complaint management. The system replaces manual record-keeping with a secure, efficient, and user-friendly digital platform.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "liveLink": "https://github.com/shivram20/Hostel-management-system",
+    "codeLink": "https://github.com/shivram20/Hostel-management-system",
+    "rating": "4.5",
+    "reviews": 8,
+    "suggestions": 2
+  },
+  {
+    "id": 3,
+    "title": "Real-time Chat Application",
+    "image": "assets/chat.png",
+    "description": "Real-Time Chatting Web Application developed using HTML, CSS, JavaScript, Node.js, Express, and Socket.IO. Socket.IO enables real-time bidirectional communication between users.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "MongoDB"
+    ],
+    "liveLink": "https://chatting-webpage.onrender.com",
+    "codeLink": "https://github.com/shivram20/CHATTING-WEBPAGE",
+    "rating": "4.3",
+    "reviews": 6,
+    "suggestions": 2
+  },
+  {
+    "id": 4,
+    "title": "Government MCA College",
+    "image": "assets/portfolio.png",
+    "description": "This is a simple web-based website developed using HTML, CSS, JavaScript, AngularJS, and PHP. HTML and CSS are used for structure and design, AngularJS handles the frontend logic, and PHP manages backend processing. The website demonstrates basic frontend-backend interaction.",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "AngularJS",
+      "PHP"
+    ],
+    "liveLink": "https://github.com/shivram20/gmca",
+    "codeLink": "https://github.com/shivram20/gmca",
+    "rating": "4.3",
+    "reviews": 6,
+    "suggestions": 2
+  }
+]

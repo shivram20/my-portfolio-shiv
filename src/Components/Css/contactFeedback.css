@@ -1,122 +1,586 @@
-/* Page background */
 .cf-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(218, 231, 239);
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding: 100px 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #041936;
+
+  color: #ffffff;
+
+  box-sizing: border-box;
 }
 
-/* Main card */
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
 .cf-card {
-    width: 900px;
-    height: 450px;
-    background: white;
-    display: flex;
-    border-radius: 22px;
-    overflow: hidden;
+  width: 100%;
 
-    box-shadow: 0 25px 50px rgba(197, 193, 193, 0.25);
+  max-width: 1100px;
+
+  min-height: 520px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  background: #06182e;
+
+  border: 1px solid #16436b;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* Left panel */
+
+.cf-card:hover {
+  border-color: #1b6da8;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =====================================================
+   LEFT PANEL
+===================================================== */
+
 .cf-left {
-    width: 40%;
-    padding: 50px 35px;
-    background: #f7f9fc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: relative;
+
+  width: 42%;
+
+  padding: 55px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0a213b,
+      #06182e
+    );
+
+  border-right: 1px solid #16436b;
+
+  overflow: hidden;
 }
+
+
+/* Decorative glow */
+
+.cf-left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(7, 140, 255, 0.12);
+
+  filter: blur(55px);
+
+  top: -90px;
+
+  left: -90px;
+}
+
+
+/* =====================================================
+   LEFT SMALL TITLE
+===================================================== */
+
+.cf-left::after {
+  content: "GET IN TOUCH";
+
+  position: absolute;
+
+  top: 35px;
+
+  left: 45px;
+
+  color: #078cff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   LEFT HEADING
+===================================================== */
 
 .cf-left h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
 }
+
+
+.cf-left h2 span {
+  color: #078cff;
+}
+
+
+/* =====================================================
+   LEFT DESCRIPTION
+===================================================== */
 
 .cf-left p {
-    font-size: 15px;
-    margin-bottom: 25px;
-    opacity: 0.9;
-    color:black;
-    font-weight: 500;
+  position: relative;
+
+  z-index: 1;
+
+  margin: 0 0 30px;
+
+  color: #a6bbcf;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
 }
+
+
+/* =====================================================
+   LEFT BUTTON
+===================================================== */
 
 .cf-left button {
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: #3b82f6;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
+  position: relative;
 
-    transition: 0.3s;
+  z-index: 1;
+
+  width: fit-content;
+
+  padding: 12px 22px;
+
+  border: 1px solid #078cff;
+
+  border-radius: 9px;
+
+  background: #078cff;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 
 .cf-left button:hover {
-    transform: scale(1.05);
+  background: #0879d8;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(7, 140, 255, 0.25);
 }
 
-/* Right panel */
+
+/* =====================================================
+   RIGHT PANEL
+===================================================== */
+
 .cf-right {
-    width: 60%;
-    padding: 40px;
+  width: 58%;
+
+  padding: 50px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background: #06182e;
 }
+
+
+/* =====================================================
+   FORM TITLE
+===================================================== */
 
 .cf-right h2 {
-    margin-bottom: 20px;
-    padding: 12px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 22px;
+  margin: 0 0 25px;
+
+  padding: 0;
+
+  color: #ffffff;
+
+  text-align: left;
+
+  font-size: 26px;
+
+  font-weight: 600;
 }
 
-/* Inputs */
+
+.cf-right h2 span {
+  color: #078cff;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.cf-right form {
+  width: 100%;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
 .cf-right input,
 .cf-right textarea,
 .cf-right select {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 15px;
+  width: 100%;
 
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
+  padding: 13px 15px;
+
+  margin-bottom: 15px;
+
+  background: #0a213b;
+
+  color: #ffffff;
+
+  border: 1px solid #16436b;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+
+/* Placeholder */
+
+.cf-right input::placeholder,
+.cf-right textarea::placeholder {
+  color: #718ba3;
+}
+
+
+/* Focus */
+
+.cf-right input:focus,
+.cf-right textarea:focus,
+.cf-right select:focus {
+  background: #0d2945;
+
+  border-color: #078cff;
+
+  box-shadow:
+    0 0 0 3px rgba(7, 140, 255, 0.1);
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.cf-right select {
+  cursor: pointer;
+
+  color: #a6bbcf;
+}
+
+
+.cf-right select option {
+  background: #06182e;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
 
 .cf-right textarea {
-    height: 90px;
-    resize: none;
+  min-height: 110px;
+
+  resize: vertical;
+
+  line-height: 1.6;
 }
 
-/* Submit button */
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
 .cf-right button {
-    width: 100%;
-    padding: 12px;
-    background: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 100%;
+
+  padding: 13px 20px;
+
+  margin-top: 3px;
+
+  background: #078cff;
+
+  color: #ffffff;
+
+  border: 1px solid #078cff;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
 
 .cf-right button:hover {
-    background: #3b82f6;
-    transform: scale(1.05);
+  background: #0879d8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(7, 140, 255, 0.22);
 }
 
-@media (max-width: 768px) {
-    .cf-card {
-        flex-direction: column;
-        height: auto;
-        width: 90%;
-    }
 
-    .cf-left,
-    .cf-right {
-        width: 100%;
-    }
+.cf-right button:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .cf-container {
+    padding: 80px 20px;
+  }
+
+
+  .cf-card {
+    max-width: 750px;
+
+    flex-direction: column;
+  }
+
+
+  .cf-left,
+  .cf-right {
+    width: 100%;
+  }
+
+
+  .cf-left {
+    min-height: 300px;
+
+    padding: 50px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #16436b;
+  }
+
+
+  .cf-right {
+    padding: 45px;
+  }
+
+
+  .cf-left::after {
+    left: 50px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .cf-container {
+    padding: 65px 15px;
+  }
+
+
+  .cf-card {
+    border-radius: 15px;
+  }
+
+
+  .cf-left {
+    min-height: auto;
+
+    padding: 50px 25px 30px;
+  }
+
+
+  .cf-left::after {
+    top: 25px;
+
+    left: 25px;
+
+    font-size: 11px;
+  }
+
+
+  .cf-left h2 {
+    font-size: 28px;
+  }
+
+
+  .cf-left p {
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+  }
+
+
+  .cf-left button {
+    width: 100%;
+  }
+
+
+  .cf-right {
+    padding: 30px 22px;
+  }
+
+
+  .cf-right h2 {
+    font-size: 23px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .cf-right input,
+  .cf-right textarea,
+  .cf-right select {
+    padding: 12px 13px;
+
+    font-size: 13px;
+  }
+
+
+  .cf-right textarea {
+    min-height: 100px;
+  }
+
+
+  .cf-right button {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .cf-container {
+    padding: 55px 12px;
+  }
+
+
+  .cf-left {
+    padding: 48px 18px 25px;
+  }
+
+
+  .cf-left::after {
+    left: 18px;
+  }
+
+
+  .cf-left h2 {
+    font-size: 25px;
+  }
+
+
+  .cf-left p {
+    font-size: 13px;
+  }
+
+
+  .cf-right {
+    padding: 25px 17px;
+  }
+
+
+  .cf-right h2 {
+    font-size: 21px;
+  }
+
 }
