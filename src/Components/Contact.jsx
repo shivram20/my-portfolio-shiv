@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Css/contactFeedback.css";
+import { FaPaperPlane } from "react-icons/fa";
+
 import api from "../api/axios";
 
 function ContactFeedback() {
@@ -102,7 +104,10 @@ function ContactFeedback() {
                 required
               />
 
-              <button type="submit">SEND MESSAGE</button>
+              <button type="submit" className="send-btn">
+                <FaPaperPlane className="all-icons" />
+                <span>SEND MESSAGE</span>
+              </button>
             </form>
           ) : (
             <form onSubmit={feedbackHandler}>
@@ -139,8 +144,10 @@ function ContactFeedback() {
                 }
                 required
               />
-
-              <button type="submit">SUBMIT FEEDBACK</button>
+              <button type="submit">
+                <FaPaperPlane className="all-icons" />
+                <span>SUBMIT FEEDBACK</span>
+              </button>
             </form>
           )}
         </div>

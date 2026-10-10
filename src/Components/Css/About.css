@@ -5,17 +5,15 @@
 
   padding: 100px 20px;
 
-  background: #041936;
+  background: var(--primary-background);
 
-  color: #ffffff;
+  color:#06182e;
 
   display: flex;
 
   flex-direction: column;
 
   align-items: center;
-
-  font-family: "Segoe UI", sans-serif;
 
   box-sizing: border-box;
 }
@@ -28,7 +26,7 @@
 .about-page::before {
   content: "ABOUT ME";
 
-  color: #078cff;
+  color:#041936;
 
   font-size: 14px;
 
@@ -53,7 +51,7 @@
 
   text-align: center;
 
-  color: #ffffff;
+  color: #041936;
 }
 
 
@@ -66,7 +64,7 @@
 
   line-height: 1.7;
 
-  color: #9eb4ca;
+  color: #041936;
 
   max-width: 650px;
 }
@@ -100,16 +98,11 @@
 
   box-sizing: border-box;
 
-  background: #06182e;
-
-  border: 1px solid #16436b;
+  background: var(--background);
 
   border-radius: 16px;
 
   padding: 30px;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.25);
 
   transition:
     transform 0.35s ease,
@@ -126,10 +119,6 @@
 .skills:hover {
   transform: translateY(-8px);
 
-  border-color: #078cff;
-
-  box-shadow:
-    0 15px 45px rgba(0, 130, 255, 0.15);
 }
 
 
@@ -140,7 +129,7 @@
 .about-text p {
   margin: 0;
 
-  color: #a6bbcf;
+  color: var(--text-color);
 
   font-size: 15px;
 
@@ -172,7 +161,7 @@
 
   font-weight: 600;
 
-  border-bottom: 2px solid #078cff;
+  border-bottom: 2px solid #041936;
 }
 
 
@@ -198,7 +187,7 @@
 
   color: #a6bbcf;
 
-  background: #0a213b;
+  background: var(--btns-background);
 
   border: 1px solid #123b5e;
 
@@ -221,8 +210,6 @@
 
 .skills li:hover {
   background: #0d2d4c;
-
-  border-color: #078cff;
 
   transform: translateX(5px);
 
@@ -257,23 +244,13 @@
 
   border-radius: 50%;
 
-  background: #078cff;
+  background: var(--primary-background);
 
-  color: #ffffff;
+  color: #041936;
 
   font-size: 11px;
 
   font-weight: 700;
-}
-
-
-/* =====================================================
-   OPTIONAL HIGHLIGHT
-===================================================== */
-
-.about-text strong,
-.skills strong {
-  color: #078cff;
 }
 
 

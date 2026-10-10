@@ -11,7 +11,7 @@
 
   align-items: center;
 
-  background: #041936;
+  background: var(--primary-background);
 
   color: #ffffff;
 
@@ -34,14 +34,9 @@
 
   overflow: hidden;
 
-  background: #06182e;
-
-  border: 1px solid #16436b;
+  background: var(--background);
 
   border-radius: 20px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35);
 
   transition:
     border-color 0.3s ease,
@@ -50,10 +45,8 @@
 
 
 .cf-card:hover {
-  border-color: #1b6da8;
 
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
 }
 
 
@@ -74,41 +67,10 @@
 
   justify-content: center;
 
-  background:
-    linear-gradient(
-      145deg,
-      #0a213b,
-      #06182e
-    );
-
-  border-right: 1px solid #16436b;
+  background:var(--background);
 
   overflow: hidden;
 }
-
-
-/* Decorative glow */
-
-.cf-left::before {
-  content: "";
-
-  position: absolute;
-
-  width: 220px;
-
-  height: 220px;
-
-  border-radius: 50%;
-
-  background: rgba(7, 140, 255, 0.12);
-
-  filter: blur(55px);
-
-  top: -90px;
-
-  left: -90px;
-}
-
 
 /* =====================================================
    LEFT SMALL TITLE
@@ -123,7 +85,7 @@
 
   left: 45px;
 
-  color: #078cff;
+  color: var(--text-color);
 
   font-size: 12px;
 
@@ -144,18 +106,13 @@
 
   margin: 0 0 18px;
 
-  color: #ffffff;
+  color:white;
 
   font-size: 34px;
 
   line-height: 1.2;
 
   font-weight: 700;
-}
-
-
-.cf-left h2 span {
-  color: #078cff;
 }
 
 
@@ -193,13 +150,13 @@
 
   padding: 12px 22px;
 
-  border: 1px solid #078cff;
-
   border-radius: 9px;
 
-  background: #078cff;
+  border: #06182e;
 
-  color: #ffffff;
+  background: var(--btns-background);
+
+  color: white;
 
   font-size: 14px;
 
@@ -215,12 +172,9 @@
 
 
 .cf-left button:hover {
-  background: #0879d8;
-
+ 
   transform: translateY(-3px);
 
-  box-shadow:
-    0 10px 25px rgba(7, 140, 255, 0.25);
 }
 
 
@@ -239,7 +193,7 @@
 
   justify-content: center;
 
-  background: #06182e;
+  background:var(--primary-background);
 }
 
 
@@ -252,7 +206,7 @@
 
   padding: 0;
 
-  color: #ffffff;
+  color:#06182e;
 
   text-align: left;
 
@@ -261,15 +215,6 @@
   font-weight: 600;
 }
 
-
-.cf-right h2 span {
-  color: #078cff;
-}
-
-
-/* =====================================================
-   FORM GROUP
-===================================================== */
 
 .cf-right form {
   width: 100%;
@@ -289,17 +234,15 @@
 
   margin-bottom: 15px;
 
-  background: #0a213b;
+  background: var(--background);
 
-  color: #ffffff;
-
-  border: 1px solid #16436b;
+  color: white;
+  
+  border: none;
 
   border-radius: 9px;
 
   outline: none;
-
-  font-family: "Segoe UI", sans-serif;
 
   font-size: 14px;
 
@@ -314,7 +257,7 @@
 
 .cf-right input::placeholder,
 .cf-right textarea::placeholder {
-  color: #718ba3;
+  color: white;
 }
 
 
@@ -324,8 +267,6 @@
 .cf-right textarea:focus,
 .cf-right select:focus {
   background: #0d2945;
-
-  border-color: #078cff;
 
   box-shadow:
     0 0 0 3px rgba(7, 140, 255, 0.1);
@@ -339,7 +280,7 @@
 .cf-right select {
   cursor: pointer;
 
-  color: #a6bbcf;
+  color: white;
 }
 
 
@@ -363,29 +304,23 @@
 }
 
 
-/* =====================================================
-   SUBMIT BUTTON
-===================================================== */
-
 .cf-right button {
   width: 100%;
-
   padding: 13px 20px;
-
   margin-top: 3px;
 
-  background: #078cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 
+  background: var(--btns-background);
   color: #ffffff;
-
-  border: 1px solid #078cff;
-
+  border: none;
   border-radius: 9px;
 
   font-size: 14px;
-
   font-weight: 600;
-
   cursor: pointer;
 
   transition:
@@ -394,21 +329,23 @@
     box-shadow 0.3s ease;
 }
 
-
-.cf-right button:hover {
-  background: #0879d8;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 25px rgba(7, 140, 255, 0.22);
+.cf-right button .all-icons {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
+.cf-right button span {
+  line-height: 1;
+}
+
+.cf-right button:hover {
+  transform: translateY(-2px);
+}
 
 .cf-right button:active {
   transform: translateY(0);
 }
-
 
 /* =====================================================
    TABLET

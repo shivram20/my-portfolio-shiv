@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Css/Home.css";
+import { FaFileAlt, FaFolderOpen  } from "react-icons/fa";
 
 function Home() {
   return (
@@ -14,16 +15,14 @@ function Home() {
           </h1>
 
           <div className="tech-box">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JS</span>
+            
           </div>
         </div>
 
         {/* Right Content */}
         <div className="home-right">
           <h2>
-            Welcome to My Portfolio
+            Welcome to <span>My Portfolio </span>
           </h2>
           <p>
             Build a clean, modern and responsive website using reusable
@@ -32,6 +31,7 @@ function Home() {
 
           <div className="home-buttons">
             <NavLink className="btn-primary" to="/projects">
+            <FaFolderOpen className="all-icons" />
               View Projects
             </NavLink>
 
@@ -41,6 +41,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <FaFileAlt className="all-icons"/>
               My Resume
             </a>
           </div>

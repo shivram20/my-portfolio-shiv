@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Css/Navbar.css";
+import { FaHome, FaUser, FaFolderOpen, FaEnvelope } from "react-icons/fa";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -39,15 +40,19 @@ function Navbar() {
 
       <div className={`right ${open ? "open" : ""}`}>
         <NavLink className="ns" to="/home" onClick={() => setOpen(false)}>
+          <FaHome className="nav-icon all-icons"/>
           Home
         </NavLink>
         <NavLink className="ns" to="/about" onClick={() => setOpen(false)}>
+          <FaUser className="nav-icon  all-icons" />
           About
         </NavLink>
         <NavLink className="ns" to="/projects" onClick={() => setOpen(false)}>
+          <FaFolderOpen className="nav-icon  all-icons" />
           Projects
         </NavLink>
         <NavLink className="ns" to="/contact" onClick={() => setOpen(false)}>
+          <FaEnvelope className="nav-icon  all-icons" />
           Contact
         </NavLink>
       </div>

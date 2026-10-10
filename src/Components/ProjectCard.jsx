@@ -1,9 +1,4 @@
-import {
-  FaExternalLinkAlt,
-  FaGithub,
-  FaStar,
-  FaLightbulb,
-} from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import "./Css/Projects.css";
 
 const ProjectCard = ({ project }) => {
@@ -51,7 +46,7 @@ const ProjectCard = ({ project }) => {
           >
             <span>Live Demo</span>
 
-            <FaExternalLinkAlt />
+            <FaExternalLinkAlt className="all-icons" />
           </a>
 
           <a
@@ -62,30 +57,8 @@ const ProjectCard = ({ project }) => {
           >
             <span>View Code</span>
 
-            <FaGithub />
+            <FaGithub className="all-icons" />
           </a>
-        </div>
-
-        {/* Footer */}
-
-        <div className="project-footer">
-          {/* Rating */}
-
-          <div className="rating">
-            <FaStar className="star-icon" />
-
-            <span className="rating-value">{project.rating}</span>
-
-            <span className="review-count">({project.reviews} reviews)</span>
-          </div>
-
-          {/* Suggestions */}
-
-          <div className="suggestions">
-            <FaLightbulb className="suggestion-icon" />
-
-            <span>{project.suggestions} Suggestions</span>
-          </div>
         </div>
       </div>
     </article>

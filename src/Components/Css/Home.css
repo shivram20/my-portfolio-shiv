@@ -11,9 +11,8 @@
 
   align-items: center;
 
-  background: #041936;
+  background: var(--primary-background);
 
-  color: #ffffff;
 }
 
 
@@ -32,27 +31,17 @@
 
   overflow: hidden;
 
-  background: #06182e;
+  background: var(--background);
 
-  border: 1px solid #16436b;
+  border: 1px solid darkcyan;
 
   border-radius: 20px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.35);
 
   transition:
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-
-.home-card:hover {
-  border-color: #1b6da8;
-
-  box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.4);
-}
 
 
 /* =====================================================
@@ -70,39 +59,11 @@
 
   justify-content: center;
 
-  background:
-    linear-gradient(145deg,
-      #0a213b,
-      #06182e);
-
-  border-right: 1px solid #16436b;
+  background:var(--background);
 
   position: relative;
 
   overflow: hidden;
-}
-
-
-/* Decorative blue glow */
-
-.home-left::before {
-  content: "";
-
-  position: absolute;
-
-  width: 220px;
-
-  height: 220px;
-
-  border-radius: 50%;
-
-  background: rgba(7, 140, 255, 0.12);
-
-  filter: blur(50px);
-
-  top: -80px;
-
-  left: -80px;
 }
 
 
@@ -125,64 +86,7 @@
 
   letter-spacing: 1px;
 
-  color: #ffffff;
 }
-
-
-.home-left h1 span {
-  color: #078cff;
-}
-
-
-/* =====================================================
-   TECH STACK
-===================================================== */
-
-.tech-box {
-  position: relative;
-
-  z-index: 1;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-}
-
-
-.tech-box span {
-  padding: 9px 16px;
-
-  border-radius: 25px;
-
-  background: #0b3764;
-
-  border: 1px solid #14527e;
-
-  color: #e3f2ff;
-
-  font-size: 13px;
-
-  font-weight: 600;
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-
-.tech-box span:hover {
-  background: #078cff;
-
-  border-color: #078cff;
-
-  color: #ffffff;
-
-  transform: translateY(-3px);
-}
-
 
 /* =====================================================
    RIGHT SECTION
@@ -198,28 +102,8 @@
   flex-direction: column;
 
   justify-content: center;
+
 }
-
-
-/* =====================================================
-   SMALL INTRO
-===================================================== */
-
-.home-right::before {
-
-  display: block;
-
-  margin-bottom: 15px;
-
-  color: #078cff;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
 
 /* =====================================================
    TITLE
@@ -234,14 +118,11 @@
 
   font-weight: 700;
 
-  color: #ffffff;
 }
-
 
 .home-right h2 span {
-  color: #078cff;
+  color: #041936;
 }
-
 
 /* =====================================================
    DESCRIPTION
@@ -252,7 +133,7 @@
 
   margin: 0 0 30px;
 
-  color: #a6bbcf;
+  color: var(--text-color);
 
   font-size: 16px;
 
@@ -288,13 +169,11 @@
 
   padding: 13px 24px;
 
-  background: #078cff;
-
-  border: 1px solid #078cff;
+  background: var(--btns-background); 
 
   border-radius: 9px;
 
-  color: #ffffff;
+  color: white;
 
   font-size: 14px;
 
@@ -315,9 +194,6 @@
 
 
 .btn-primary:hover {
-  background: #0879d8;
-
-  border-color: #0879d8;
 
   transform: translateY(-3px);
 
@@ -363,11 +239,12 @@
 
 
 .btn-secondary:hover {
-  background: #163654;
-
-  border-color: #078cff;
 
   transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 140, 255, 0.25);
+    
 }
 
 

@@ -3,9 +3,8 @@
 
   padding: 100px 20px;
 
-  background: #041936;
+  background: var(--primary-background);
 
-  color: #ffffff;
 }
 
 
@@ -36,7 +35,7 @@
 
   margin-bottom: 12px;
 
-  color: #008cff;
+  color: var(--background);
 
   font-size: 14px;
 
@@ -55,12 +54,12 @@
 
   font-weight: 700;
 
-  color: #ffffff;
+  color: var(--primary-text-color);
 }
 
 
 .projects-header h2 span {
-  color: #008cff;
+  color: var(--background);
 }
 
 
@@ -69,7 +68,7 @@
 
   margin: 20px auto 0;
 
-  color: #9eb4ca;
+  color: var(--primary-text-color);
 
   font-size: 16px;
 
@@ -90,9 +89,7 @@
 
   overflow: hidden;
 
-  background: #06182e;
-
-  border: 1px solid #16436b;
+  background: var(--background);
 
   border-radius: 16px;
 
@@ -153,7 +150,7 @@
 .project-title {
   margin: 0 0 13px;
 
-  color: #008cff;
+  color: var(--primary-text-color);
 
   font-size: 23px;
 
@@ -166,7 +163,7 @@
 .project-description {
   margin: 0 0 15px;
 
-  color: #a6bbcf;
+  color: var(--text-color);
 
   font-size: 15px;
 
@@ -193,13 +190,11 @@
 
   padding: 8px 16px;
 
-  border-radius: 25px;
+  border-radius: 8px;
 
-  background: #0b3764;
+  background: var(--btns-background);
 
-  border: 1px solid #104d7d;
-
-  color: #e3f2ff;
+  color: var(--text-color);
 
   font-size: 13px;
 
@@ -247,21 +242,14 @@
 /* Live */
 
 .live-btn {
-  background: #078cff;
-
-  border: 1px solid #078cff;
+  background: var(--btns-background);
 
   color: #ffffff;
 
-  box-shadow:
-    0 5px 15px rgba(0, 140, 255, 0.18);
 }
 
 
 .live-btn:hover {
-  background: #0879d8;
-
-  border-color: #0879d8;
 
   transform: translateY(-2px);
 }
@@ -270,87 +258,17 @@
 /* Code */
 
 .code-btn {
-  background: #102943;
+  background: var(--btns-background);
 
-  border: 1px solid #275274;
 
   color: #ffffff;
 }
 
 
 .code-btn:hover {
-  background: #163654;
-
-  border-color: #078cff;
 
   transform: translateY(-2px);
 }
-
-.project-footer {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 15px;
-
-  padding-top: 18px;
-
-  border-top: 1px solid #163956;
-
-  color: #9db2c6;
-
-  font-size: 14px;
-}
-
-.rating {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-}
-
-
-.star-icon {
-  color: #ffc107;
-
-  font-size: 17px;
-}
-
-
-.rating-value {
-  color: #ffffff;
-
-  font-weight: 600;
-}
-
-
-.review-count {
-  color: #8da4ba;
-
-  font-size: 13px;
-}
-
-
-.suggestions {
-  display: flex;
-
-  align-items: center;
-
-  gap: 8px;
-
-  white-space: nowrap;
-}
-
-
-.suggestion-icon {
-  color: #d5e3f1;
-
-  font-size: 17px;
-}
-
 
 .projects-loading {
   text-align: center;

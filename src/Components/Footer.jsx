@@ -28,14 +28,14 @@ function Footer() {
     <footer className={`footer ${showFooter ? "show" : "hide"}`}>
       <div className="footer-content">
         <a href="https://github.com/shivram20" target="_blank" rel="noreferrer">
-          Github
+          Github |
         </a>
         <a
           href="https://www.linkedin.com/in/shivram-vasava-824883363"
           target="_blank"
           rel="noreferrer"
         >
-          LinkedIn
+          LinkedIn |
         </a>
         <a
           href="https://www.instagram.com/shivram_20x"

@@ -18,7 +18,7 @@ const Projects = () => {
           </h2>
 
           <p>
-            Here are some of the projects Ive built. Each project helped me
+            Here are some of the projects i built. Each project helped me
             learn new technologies and improve my skills.
           </p>
         </div>
